@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:taskapp/core/extentions/color_extension.dart';
 import 'package:taskapp/core/extentions/context_extension.dart';
+import 'package:taskapp/core/extentions/text_theme_extension.dart';
 
 class WSharedInput extends StatefulWidget {
   const WSharedInput({
@@ -56,7 +57,9 @@ class _WSharedInputState extends State<WSharedInput> {
   InputDecoration buildInputDecoration(String label) {
     return InputDecoration(
       labelText: label.tr(),
-      labelStyle: TextStyle(color: context.theme.colorScheme.blackColor),
+      labelStyle:  context.textTheme.titleSemiBold_16(context).copyWith(
+        color: context.theme.colorScheme.blackColor,
+      ),
       enabledBorder: OutlineInputBorder(
         borderSide: BorderSide(color: context.theme.colorScheme.blackColor),
       ),

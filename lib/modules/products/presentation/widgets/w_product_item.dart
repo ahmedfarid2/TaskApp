@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:taskapp/core/constants/constants.dart';
 import 'package:taskapp/core/extentions/color_extension.dart';
 import 'package:taskapp/core/extentions/context_extension.dart';
+import 'package:taskapp/core/extentions/int_extension.dart';
+import 'package:taskapp/core/extentions/text_theme_extension.dart';
 import 'package:taskapp/modules/products/models/m_products.dart';
 
 class WProductItem extends StatelessWidget {
@@ -10,6 +13,8 @@ class WProductItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isWide = Constants.constValues.isWideScreen(context);
+
     return InkWell(
       onTap: () {},
       child: Container(
@@ -41,45 +46,39 @@ class WProductItem extends StatelessWidget {
                 width: 75,
                 height: 75,
                 fit: BoxFit.cover,
-                errorBuilder: (context, _, __){
-                 return Container(
-                   color: Colors.grey.withOpacity(0.7),
-                   width: 75,
-                   height: 75,
-                 );
+                errorBuilder: (context, _, __) {
+                  return Container(
+                    color: Colors.grey.withOpacity(0.7),
+                    width: 75,
+                    height: 75,
+                  );
                 },
               ),
             ),
-            const SizedBox(
-              width: 12,
-            ),
+            12.createHorizontalGep(),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: isWide ? MainAxisAlignment.center : MainAxisAlignment.start,
                 children: [
                   Text(
                     product.title ?? 'No Title',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: context.theme.colorScheme.primaryColor,
-                    ),
+                    style: context.textTheme.titleSemiBold_16(context).copyWith(
+                          color: context.theme.colorScheme.primaryColor,
+                        ),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
                   Text(
                     '\$${product.price ?? 'N/A'}',
-                    style: const TextStyle(
-                      fontSize: 14,
-                      color: Colors.black,
-                    ),
+                    style: context.textTheme.titleSemiBold_14(context).copyWith(
+                          color: context.theme.colorScheme.blackColor,
+                        ),
                   ),
                 ],
               ),
             ),
-            const SizedBox(
-              width: 12,
-            ),
+            12.createHorizontalGep(),
             const Icon(
               Icons.arrow_forward_ios,
               color: Colors.black54,

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:taskapp/core/extentions/color_extension.dart';
 import 'package:taskapp/core/extentions/context_extension.dart';
+import 'package:taskapp/core/extentions/text_theme_extension.dart';
 import 'package:taskapp/core/services/routes/routes_names.dart';
 import 'package:taskapp/modules/products/presentation/widgets/w_lang_toggle.dart';
 import 'package:taskapp/modules/products/presentation/widgets/w_products_list.dart';
@@ -30,9 +31,12 @@ class _SNProductsState extends State<SNProducts> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('products'.tr()),
+        title: Text(
+          'products'.tr(),
+          style: context.textTheme.titleSemiBold_18(context),
+        ),
         centerTitle: false,
-        actions:  const [
+        actions: const [
           WLangToggle(),
         ],
       ),
@@ -46,13 +50,19 @@ class _SNProductsState extends State<SNProducts> {
           size: 35,
         ),
       ),
-
       body: BlocConsumer<ProductsCubit, ProductsState>(
         bloc: cubit,
         listener: (context, state) {
           if (state is GetProductsError) {
             ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text('Error loading products'.tr())),
+              SnackBar(
+                content: Text(
+                  'Error loading products'.tr(),
+                  style: context.textTheme.titleSemiBold_16(context).copyWith(
+                        color: context.theme.colorScheme.whiteColor,
+                      ),
+                ),
+              ),
             );
           }
         },
@@ -62,7 +72,14 @@ class _SNProductsState extends State<SNProducts> {
           } else if (state is GetProductsLoading) {
             return const Center(child: CircularProgressIndicator());
           } else {
-            return Center(child: Text('No products available'.tr()));
+            return Center(
+              child: Text(
+                'No products available'.tr(),
+                style: context.textTheme.titleBold_20(context).copyWith(
+                      color: context.theme.colorScheme.primaryColor,
+                    ),
+              ),
+            );
           }
         },
       ),
