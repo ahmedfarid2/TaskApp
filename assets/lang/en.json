@@ -1,0 +1,21 @@
+{
+  "products": "Products",
+  "add_product": "Add Products",
+  "submit": "Submit",
+  "title": "Title",
+  "description": "Description",
+  "price": "Price",
+  "discount_percentage": "Discount Percentage",
+  "rating": "Rating",
+  "stock": "Stock",
+  "brand": "Brand",
+  "category": "Category",
+  "title_error": "Please enter a product title",
+  "description_error": "Please enter a product description",
+  "price_error": "Please enter a product price",
+  "discount_percentage_error": "Please enter a product discount percentage",
+  "rating_error": "Please enter a product rating",
+  "brand_error": "Please enter a product brand",
+  "stock_error": "Please enter a product stock",
+  "category_error": "Please enter a product category"
+}

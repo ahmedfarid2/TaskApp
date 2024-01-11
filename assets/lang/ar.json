@@ -1,0 +1,22 @@
+{
+  "products": "المنتجات",
+  "add_product": "إضافة منتج",
+  "submit": "إرسال",
+  "title": "العنوان",
+  "description": "الوصف",
+  "price": "السعر",
+  "discount_percentage": "نسبة الخصم",
+  "rating": "التقييم",
+  "stock": "المخزون",
+  "brand": "العلامة التجارية",
+  "category": "الفئة",
+  "title_error": "يرجى إدخال عنوان المنتج",
+  "description_error": "يرجى إدخال وصف المنتج",
+  "price_error": "يرجى إدخال سعر المنتج",
+  "discount_percentage_error": "يرجى إدخال نسبة خصم المنتج",
+  "rating_error": "يرجى إدخال تقييم المنتج",
+  "brand_error": "يرجى إدخال علامة المنتج التجارية",
+  "stock_error": "يرجى إدخال مخزون المنتج",
+  "category_error": "يرجى إدخال فئة المنتج"
+}
+
