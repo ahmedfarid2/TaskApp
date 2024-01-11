@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:taskapp/core/extentions/color_extension.dart';
 import 'package:taskapp/core/extentions/context_extension.dart';
+import 'package:taskapp/core/extentions/text_theme_extension.dart';
 import 'package:taskapp/core/widgets/w_button_loader_light.dart';
 
 class WAppButton extends StatefulWidget {
@@ -43,9 +44,7 @@ class _WAppButtonState extends State<WAppButton> {
                   child: Text(
                     widget.title,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
+                    style: context.textTheme.titleSemiBold_18(context).copyWith(
                       color: context.theme.colorScheme.whiteColor,
                     ),
                   ),

@@ -1,5 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:taskapp/core/extentions/context_extension.dart';
+import 'package:taskapp/core/extentions/text_theme_extension.dart';
 import 'package:taskapp/core/widgets/w_app_button.dart';
 import 'package:taskapp/core/widgets/w_shared_input.dart';
 import 'package:taskapp/modules/products/state_managment/products_cubit.dart';
@@ -25,7 +27,10 @@ class _SNAddProductsState extends State<SNAddProducts> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('add_product'.tr()),
+        title: Text(
+          'add_product'.tr(),
+          style: context.textTheme.titleBold_20(context),
+        ),
       ),
       body: Form(
         key: cubit.formAddProduct.key,
