@@ -32,9 +32,9 @@ class WProductItem extends StatelessWidget {
             ),
           ],
         ),
-        padding: const EdgeInsets.symmetric(
-          horizontal: 12,
-          vertical: 8,
+        padding:  EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width * 0.03,
+          vertical: MediaQuery.of(context).size.height * 0.01,
         ),
         margin: const EdgeInsets.only(left: 4, right: 4),
         child: Row(
@@ -43,14 +43,14 @@ class WProductItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
               child: Image.network(
                 product.thumbnail ?? '',
-                width: 75,
-                height: 75,
+                width: MediaQuery.of(context).size.width * 0.25,
+                height: MediaQuery.of(context).size.height * 0.1 ,
                 fit: BoxFit.cover,
                 errorBuilder: (context, _, __) {
                   return Container(
                     color: Colors.grey.withOpacity(0.7),
-                    width: 75,
-                    height: 75,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height:  MediaQuery.of(context).size.height * 0.1,
                   );
                 },
               ),

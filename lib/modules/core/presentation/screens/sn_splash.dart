@@ -35,7 +35,7 @@ class _SNSplashState extends State<SNSplash> with SingleTickerProviderStateMixin
     Future.delayed(
       const Duration(seconds: 1),
       () {
-        Navigator.pushNamedAndRemoveUntil(context, RoutesNames.products.viewProducts,(Route<dynamic> route) => false);
+        Navigator.pushNamedAndRemoveUntil(context, RoutesNames.products.viewProducts, (Route<dynamic> route) => false);
       },
     );
   }
@@ -59,8 +59,8 @@ class _SNSplashState extends State<SNSplash> with SingleTickerProviderStateMixin
                 child: Center(
                   child: SvgPicture.asset(
                     Assets.icons.appLogoSvg.path,
-                    width: 200,
-                    height: 200,
+                    width: MediaQuery.of(context).size.height * 0.4,
+                    height: MediaQuery.of(context).size.width * 0.4,
                   ),
                 ),
               );

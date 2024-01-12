@@ -14,14 +14,11 @@ import 'package:flutter/services.dart';
 class $AssetsAnimationsGen {
   const $AssetsAnimationsGen();
 
-  /// File path: assets/animations/button_loader_dark.json
-  String get buttonLoaderDark => 'assets/animations/button_loader_dark.json';
-
   /// File path: assets/animations/button_loader_light.json
   String get buttonLoaderLight => 'assets/animations/button_loader_light.json';
 
   /// List of all assets
-  List<String> get values => [buttonLoaderDark, buttonLoaderLight];
+  List<String> get values => [buttonLoaderLight];
 }
 
 class $AssetsFontsGen {

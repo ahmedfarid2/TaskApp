@@ -53,8 +53,8 @@ class _SNAddProductsState extends State<SNAddProducts> {
               },
               textInputType: TextInputType.text,
             ),
-            const SizedBox(
-              height: 8,
+             SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
             ),
             WSharedInput(
               controller: cubit.formAddProduct.descriptionController,
@@ -72,8 +72,8 @@ class _SNAddProductsState extends State<SNAddProducts> {
               },
               textInputType: TextInputType.text,
             ),
-            const SizedBox(
-              height: 8,
+             SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
             ),
             WSharedInput(
               controller: cubit.formAddProduct.priceController,
@@ -91,8 +91,8 @@ class _SNAddProductsState extends State<SNAddProducts> {
               },
               textInputType: TextInputType.number,
             ),
-            const SizedBox(
-              height: 8,
+             SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
             ),
             WSharedInput(
               controller: cubit.formAddProduct.discountPercentageController,
@@ -110,8 +110,8 @@ class _SNAddProductsState extends State<SNAddProducts> {
               },
               textInputType: TextInputType.number,
             ),
-            const SizedBox(
-              height: 8,
+             SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
             ),
             WSharedInput(
               controller: cubit.formAddProduct.ratingController,
@@ -129,8 +129,8 @@ class _SNAddProductsState extends State<SNAddProducts> {
               },
               textInputType: TextInputType.number,
             ),
-            const SizedBox(
-              height: 8,
+             SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
             ),
             WSharedInput(
               controller: cubit.formAddProduct.stockController,
@@ -148,8 +148,8 @@ class _SNAddProductsState extends State<SNAddProducts> {
               },
               textInputType: TextInputType.number,
             ),
-            const SizedBox(
-              height: 8,
+             SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
             ),
             WSharedInput(
               controller: cubit.formAddProduct.brandController,
@@ -167,8 +167,8 @@ class _SNAddProductsState extends State<SNAddProducts> {
               },
               textInputType: TextInputType.text,
             ),
-            const SizedBox(
-              height: 8,
+             SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
             ),
             WSharedInput(
               controller: cubit.formAddProduct.categoryController,
@@ -186,8 +186,8 @@ class _SNAddProductsState extends State<SNAddProducts> {
               },
               textInputType: TextInputType.text,
             ),
-            const SizedBox(
-              height: 16,
+             SizedBox(
+              height: MediaQuery.of(context).size.height * 0.02,
             ),
             WAppButton(
               title: "submit".tr(),

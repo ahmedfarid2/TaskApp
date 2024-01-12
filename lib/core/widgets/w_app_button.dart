@@ -29,9 +29,9 @@ class _WAppButtonState extends State<WAppButton> {
       onTap: (!isLoading && !widget.isDisabled) ? onTap : null,
       child: Container(
         height: 54,
-        padding: const EdgeInsets.symmetric(
-          horizontal: 15,
-          vertical: 15,
+        padding:  EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width * 0.01,
+          vertical: MediaQuery.of(context).size.height * 0.01,
         ),
         decoration: BoxDecoration(
           color: disabledColor(context),
